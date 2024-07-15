@@ -23,8 +23,10 @@
                 <input type="file" class="form-control" name="file">
             </div>
         </div>
-
-        <button class="btn btn-primary mt-3" >submit</button>
+        <div class="mb-3 d-flex justify-content-center">
+            <button type="reset" class="btn btn-outline-secondary me-3">Nhap Lai</button>
+            <button type="submit" class="btn btn-success">Them moi</button>
+          </div>
     </form>
 </div>
 @endsection

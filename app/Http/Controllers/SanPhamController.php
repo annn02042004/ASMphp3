@@ -33,17 +33,33 @@ class SanPhamController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        $data =$request->all();
+        // $data = $request->validate([
+        //     'ten_san_pham' => 'required|string|max:255',
+        //     'so_luong' => 'required|integer',
+        //     'gia_san_pham' => 'required|numeric',
+        //     'gia_khuyen_mai' => 'nullable|numeric',
+        //     'ngay_nhap' => 'required|date',
+        //     'mo_ta' => 'nullable|string',
+        //     'danh_muc_id' => 'required|integer',
+        //     'trang_thai' => 'required|boolean',
+        // ]);
+
+        // $sanpham = SanPham::create($data);
+
+        // return response()->json($sanpham, 201);
+
+        $data = $request->all();
         $sanpham = new SanPham();
-
-
-        $sanpham->ten_san_pham = $data['name'];
-        $sanpham->so_luong = $data['number'];
+        $sanpham->ten_san_pham = $data['ten_san_pham'];
+        $sanpham->so_luong = $data['so_luong'];
+        // $sanpham->gia_san_pham = $data[''];
+        // $sanpham->gia_khuyen_mai= $data['gia_khuyen_mai'];
+        $sanpham->ngay_nhap=  $data['ngay_nhap'];
         $sanpham->mo_ta = $data['description'];
-        $sanpham->ngay_nhap['date'];
-        $sanpham->trang_thai['status'];
-
+        // $sanpham->danh_muc_id = $data['id'];
+        $sanpham->trang_thai = $data['trang_thai'];
+        $sanpham->save();
+        return redirect()->route('sanpham.index');
 
     }
 

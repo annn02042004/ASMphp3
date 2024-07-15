@@ -13,16 +13,15 @@ return new class extends Migration
     {
         Schema::create('san_phams', function (Blueprint $table) {
             $table->id();
-            $table->string('ten_san_pham', 100);
+            $table->string('ten_san_pham');
             $table->integer('so_luong');
-            $table->float('gia_san_pham', 8, 2);
-            $table->float('gia_khuyen_mai', 8, 2);
-            $table->timestamp('ngay_nhap', $precision = 0);
-            $table->text('mo_ta');
-            $table->bigInteger('danh_muc_id');
-            $table->bigInteger('trang_thai');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('updated_at')->nullable();
+            $table->decimal('gia_san_pham', 8, 2);
+            $table->decimal('gia_khuyen_mai', 8, 2)->nullable();
+            $table->date('ngay_nhap');
+            $table->text('mo_ta')->nullable();
+            $table->foreignId('danh_muc_id')->constrained('danh_mucs'); // assuming there's a danh_mucs table
+            $table->boolean('trang_thai');
+            $table->timestamps();
         });
     }
 

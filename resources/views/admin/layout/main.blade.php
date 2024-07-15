@@ -833,7 +833,7 @@
                                 </ul>
                             </div>
                         </li>
-                       
+
 
                         <li class="nav-item">
                             <a class="nav-link menu-link" href="#sidebarLayouts" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
@@ -875,6 +875,34 @@
                                                 </li>
                                                 <li class="nav-item">
                                                     <a href="{{ route('chucvu.index') }}" class="nav-link"> <span data-key="t-to-do">List Chức Vụ</span></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#sidebarSignIn" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarSignIn" data-key="t-signin"> Phương Thức Thanh Toán
+                                        </a>
+                                        <div class="collapse menu-dropdown" id="sidebarSignIn">
+                                            <ul class="nav nav-sm flex-column">
+                                                <li class="nav-item">
+                                                    <a href="{{ route('phuongthucthanhtoan.create') }}" class="nav-link"> <span data-key="t-file-manager">Thêm Phương thức </span></a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="{{ route('phuongthucthanhtoan.index') }}" class="nav-link"> <span data-key="t-to-do">List Phương thức</span></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#sidebarSignIn" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarSignIn" data-key="t-signin"> Trạng Thái đơn Hàng
+                                        </a>
+                                        <div class="collapse menu-dropdown" id="sidebarSignIn">
+                                            <ul class="nav nav-sm flex-column">
+                                                <li class="nav-item">
+                                                    <a href="{{ route('trangthai.create') }}" class="nav-link"> <span data-key="t-file-manager">Thêm Trạng thái </span></a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="{{ route('trangthai.index') }}" class="nav-link"> <span data-key="t-to-do">List trạng thái</span></a>
                                                 </li>
                                             </ul>
                                         </div>
